@@ -1,0 +1,339 @@
+/* Workspace Hub keeps libadwaita as the visual foundation. Custom CSS is
+ * limited to dashboard composition, semantic states and fixed card rhythm. */
+
+.workspace-page {
+  padding: 0;
+}
+
+.dashboard-panel,
+.summary-card,
+.attention-banner,
+.dashboard-tile,
+.status-list,
+.support-list {
+  border-radius: 12px;
+  background-color: alpha(currentColor, 0.055);
+}
+
+.dashboard-panel {
+  padding: 18px;
+}
+
+.summary-card {
+  padding: 16px 18px;
+  min-height: 76px;
+}
+
+.summary-card .summary-value {
+  font-size: 1.55em;
+  font-weight: 700;
+}
+
+.attention-banner {
+  padding: 12px 16px;
+}
+
+.dashboard-tile {
+  padding: 0;
+  min-height: 72px;
+}
+
+.dashboard-tile > box {
+  padding: 12px 14px;
+}
+
+.dashboard-tile:hover {
+  background-color: alpha(currentColor, 0.095);
+}
+
+.dashboard-tile:active {
+  background-color: alpha(currentColor, 0.14);
+}
+
+.tile-icon {
+  -gtk-icon-size: 24px;
+}
+
+.summary-icon {
+  -gtk-icon-size: 22px;
+}
+
+.external-indicator {
+  opacity: 0.65;
+  -gtk-icon-size: 14px;
+}
+
+.status-list,
+.support-list {
+  padding: 4px 0;
+}
+
+.status-row,
+.support-row {
+  padding: 10px 14px;
+}
+
+.status-row + .status-row,
+.support-row + .support-row {
+  border-top: 1px solid alpha(currentColor, 0.08);
+}
+
+.status-ok {
+  color: @success_color;
+}
+
+.status-warning {
+  color: @warning_color;
+}
+
+.status-error {
+  color: @error_color;
+}
+
+.status-info {
+  color: @accent_color;
+}
+
+.footer-bar {
+  padding-top: 4px;
+  opacity: 0.72;
+}
+
+.section-helper {
+  margin-top: -4px;
+}
+
+.navigation-sidebar row {
+  border-radius: 8px;
+}
+
+.layout-compact .dashboard-panel {
+  padding: 14px;
+}
+
+.layout-compact .summary-card {
+  padding: 14px;
+  min-height: 68px;
+}
+
+.layout-compact .dashboard-tile {
+  min-height: 64px;
+}
+
+/* Keep the adaptive dashboard's minimum width below the window allocation.
+ * Text labels ellipsize in code; these declarations remove theme-level
+ * minimums that would otherwise be multiplied by the multi-column grid. */
+.dashboard-panel,
+.summary-card,
+.dashboard-tile,
+.status-row,
+.support-row {
+  min-width: 0;
+}
+
+/* Dashboard surface foundation */
+.dashboard-panel,
+.summary-card,
+.attention-banner,
+.dashboard-tile,
+.status-list,
+.support-list {
+  border: 1px solid alpha(currentColor, 0.07);
+}
+
+.dashboard-panel-header {
+  min-height: 50px;
+}
+
+.tile-icon-container,
+.summary-icon-container {
+  min-width: 42px;
+  min-height: 42px;
+  border-radius: 12px;
+  background-color: alpha(currentColor, 0.075);
+}
+
+.summary-icon-container {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.dashboard-tile:hover .tile-icon-container {
+  background-color: alpha(@accent_color, 0.16);
+}
+
+/* Keep Gtk.Notebook behaviour and accessibility while the dashboard panel
+ * remains the only content surface. */
+.section-notebook,
+.section-notebook > header,
+.section-notebook > stack {
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.section-notebook > stack {
+  padding-top: 10px;
+}
+
+/* Compact section tabs use the label's natural width, cap long titles and
+ * keep the rail aligned with the section content line. */
+.section-notebook > header {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-notebook > header > tabs {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-notebook > header > tabs > tab:first-child {
+  margin-left: 0;
+}
+
+/* Keep section tabs visually secondary to tiles. Every tab surface remains
+ * transparent; inactive labels are muted and the selected page uses a clean
+ * inset line without changing spacing. */
+.section-notebook > header tab {
+  min-width: 52px;
+  margin: 0 2px;
+  padding: 3px 8px;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+
+.section-notebook > header tab:hover,
+.section-notebook > header tab:checked,
+.section-notebook > header tab:checked:hover {
+  background-color: transparent;
+  background-image: none;
+}
+
+.section-notebook > header tab:checked {
+  box-shadow: inset 0 -2px alpha(@accent_color, 0.62);
+}
+
+.section-notebook > header tab label,
+.section-tab-label {
+  min-width: 0;
+  padding: 0;
+  opacity: 0.62;
+}
+
+.section-notebook > header tab:hover label {
+  opacity: 0.82;
+}
+
+.section-notebook > header tab:checked label,
+.section-notebook > header tab:checked:hover label {
+  opacity: 1;
+}
+
+.dashboard-empty-state {
+  min-height: 0;
+  padding: 10px 0 4px;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.empty-state-icon {
+  -gtk-icon-size: 30px;
+}
+
+.layout-compact .dashboard-panel-header {
+  min-height: 46px;
+}
+
+/* Workspace health */
+.tile-health-icon {
+  -gtk-icon-size: 15px;
+  opacity: 0.9;
+}
+
+/* Dashboard icon themes and optical alignment */
+.tile-icon-container,
+.summary-icon-container,
+.status-icon-container,
+.support-icon-container {
+  padding: 0;
+}
+
+.tile-icon-container {
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 12px;
+}
+
+.summary-icon-container {
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 13px;
+}
+
+.status-icon-container {
+  min-width: 28px;
+  min-height: 28px;
+  border-radius: 8px;
+}
+
+.support-icon-container {
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 9px;
+}
+
+.tile-icon,
+.summary-icon,
+.status-content-icon,
+.support-content-icon,
+.collection-content-icon,
+.real-application-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.tile-icon,
+.real-application-icon {
+  -gtk-icon-size: 28px;
+}
+
+.summary-icon {
+  -gtk-icon-size: 28px;
+}
+
+.status-content-icon {
+  -gtk-icon-size: 20px;
+}
+
+.support-content-icon,
+.collection-content-icon {
+  -gtk-icon-size: 22px;
+}
+
+.icon-style-fluent-linux-color,
+.icon-style-fluent-linux-grey,
+.icon-style-fluent-ui-color,
+.icon-style-system,
+.real-application-icon {
+  opacity: 1;
+}
+
+
+.web-icon-choice {
+  min-width: 112px;
+  min-height: 82px;
+  padding: 0;
+}
+
+.web-icon-choice:checked {
+  background-color: alpha(@accent_bg_color, 0.22);
+}

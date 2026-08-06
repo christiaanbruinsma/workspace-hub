@@ -1,0 +1,36 @@
+Source: workspace-hub
+Section: utils
+Priority: optional
+Maintainer: Christiaan Bruinsma <christiaanbruinsma@users.noreply.github.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ gjs,
+ gir1.2-adw-1 (>= 1.5),
+ gir1.2-glib-2.0,
+ gir1.2-gtk-4.0,
+ gir1.2-pango-1.0,
+ meson (>= 0.59.0),
+ ninja-build,
+ nodejs
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: workspace-hub
+Architecture: all
+Depends:
+ ${misc:Depends},
+ gjs,
+ gir1.2-adw-1 (>= 1.5),
+ gir1.2-glib-2.0,
+ gir1.2-gtk-4.0,
+ gir1.2-pango-1.0,
+ hicolor-icon-theme
+Suggests:
+ flatpak,
+ snapd
+Description: GNOME-native starting point for a Linux workday
+ Workspace Hub gives non-technical users a calm starting point for desktop
+ applications, web apps, files, shared locations, workspace status and support.
+ .
+ This native package uses the GTK 4 and libadwaita libraries supplied by the
+ host distribution, allowing supported desktop colour schemes to be applied.

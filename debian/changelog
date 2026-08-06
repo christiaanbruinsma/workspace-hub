@@ -1,0 +1,10 @@
+workspace-hub (0.9.0) unstable; urgency=medium
+
+  * Initial public beta baseline.
+  * Provide multi-workspace management and workspace-scoped section tabs.
+  * Discover and launch local desktop, Flatpak, Snap and user applications.
+  * Copy or move configured items between tabs and workspaces.
+  * Preserve local data with serialised writes, restorepoints and fail-closed recovery.
+  * Include English, Dutch and German interface support.
+
+ -- Christiaan Bruinsma <christiaanbruinsma@users.noreply.github.com>  Thu, 06 Aug 2026 21:25:00 +0200

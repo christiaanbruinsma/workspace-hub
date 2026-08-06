@@ -1,0 +1,5 @@
+#!@GJS@ -m
+import System from 'system';
+
+System.programPath = '@PKGDATADIR@/main.js';
+await import(`file://${System.programPath}`);

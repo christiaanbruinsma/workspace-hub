@@ -1,0 +1,17 @@
+_build/
+_native-build/
+_native-install/
+obj-*/
+debian/.debhelper/
+debian/files
+debian/workspace-hub/
+*.buildinfo
+*.changes
+*.deb
+*.deb.sha256
+_site/
+.jekyll-cache/
+_flatpak-build/
+_flatpak-repo/
+*.flatpak
+*.flatpak.sha256

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Workspace Hub
+Comment=Your Linux workday, in one familiar place
+Exec=workspace-hub
+Icon=@APP_ID@
+Terminal=false
+Type=Application
+Categories=Office;Utility;
+Keywords=Workspace;Dashboard;Apps;Web Apps;Files;Support;
+StartupNotify=true
