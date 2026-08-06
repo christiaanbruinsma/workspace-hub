@@ -11,6 +11,7 @@ debian/workspace-hub/
 *.deb.sha256
 _site/
 .jekyll-cache/
+.flatpak-builder/
 _flatpak-build/
 _flatpak-repo/
 *.flatpak

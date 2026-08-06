@@ -118,7 +118,7 @@ db3979e8d03fd54c7f6ce0a1e88bbabdc55e59c9c141a44ee6d45e71c91dce9d  ./docs/develop
 16a9ec927f169ee4cb62b6e778ac41ae73453c3950110f3eb8a812ffee42058b  ./docs/index.md
 9c65b085883a4aa027c82ddd61c8ecbdd78190f9023f2511f5aa76996e85e82f  ./docs/user-guide/keyboard-shortcuts.md
 09cdfbbf4c5afe5ff65347e5a75ed760f0f888eaa78cafda8fd44f26de9faf76  ./docs/user-guide/workspace-items.md
-2f0cd57e2b778b1fb7eb73efcaf872c130ef3c9181316355241655f12b92e2ff  ./.gitignore
+82319f35a9df4266f1b05df13132f32801be1c6ae1b66d2e5d93f3736650efbe  ./.gitignore
 16330770cd18adac24f522a5d07ba0d48afb368db5a61fd017deb3b9aca7f525  ./io.github.christiaanbruinsma.WorkspaceHub.json
 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986  ./LICENSE
 db286866aa23f69c53206db7791ba891dabf062279d95dac293233ab73badc40  ./meson.build
@@ -127,7 +127,7 @@ db286866aa23f69c53206db7791ba891dabf062279d95dac293233ab73badc40  ./meson.build
 9e82e51f13637d9da639672c87ef629ec7b66c879955fb1bfa3d464ee2feb7a3  ./scripts/build-deb.sh
 1bc1daaabc21cf4fd42574a12e3879635eb4d479c1a9a958af18bdbf9b5a9984  ./scripts/build-flatpak.sh
 4ce36ce36acdb4152c343ce6d76f34250fe3b7a15cb7c6c0b867ba0789c557c4  ./scripts/verify-deb.sh
-d986adfb90a17d4e8b6cc005237d0590e3fa23862ede5f8887b87bafa89cde6c  ./scripts/verify-flatpak.sh
+af795d2c6303437a2bbfe282e6197a5991f6d3f25afc7c2215fa7b6b7b2e6d81  ./scripts/verify-flatpak.sh
 b4891672ecf9ed015bb65041c79b5ff4698d0b609cb1d9d91f694fcfe53ffde9  ./SECURITY.md
 f6232993835db8995fa7614ce2577986c9054cb85cc323d3cb58da14b4aa43a3  ./src/application.js
 4a7bfc81a403533713853e8f0761e1934ef2b43a3a928acf25e40e0623c41afe  ./src/config.js.in
