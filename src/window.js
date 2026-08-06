@@ -5,7 +5,7 @@ import GLib from 'gi://GLib';
 import Gtk from 'gi://Gtk?version=4.0';
 import GObject from 'gi://GObject';
 import Pango from 'gi://Pango';
-import {APP_ID, VERSION} from './config.js';
+import {VERSION} from './config.js';
 import {ProfileStore} from './services/profile-store.js';
 import {profileSummary} from './services/profile-contract.js';
 import {createUniqueTileId, moveWorkspaceItem, moveWorkspaceItemToTab, normaliseWorkspaceSectionPositions, removeWorkspaceItem, setWorkspaceItemGovernance, sortWorkspaceItems, upsertWorkspaceItem} from './services/workspace-items.js';
@@ -55,7 +55,6 @@ class WorkspaceHubWindow extends Adw.ApplicationWindow {
       default_height: 900,
       width_request: 760,
       height_request: 620,
-      icon_name: APP_ID,
     });
 
     this._store = new ProfileStore();

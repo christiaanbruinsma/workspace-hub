@@ -2,8 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const windowSource = fs.readFileSync(path.join(root, 'src/window.js'), 'utf8');
 const storeSource = fs.readFileSync(path.join(root, 'src/services/profile-store.js'), 'utf8');
 const dialogSource = fs.readFileSync(path.join(root, 'src/ui/copy-workspace-contents-dialog.js'), 'utf8');

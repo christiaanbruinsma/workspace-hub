@@ -133,8 +133,8 @@ test('copy destinations exclude source and archived workspaces and disambiguate 
 async function loadProfileStoreForNode() {
   const fs = await import('node:fs');
   const path = await import('node:path');
-  const {pathToFileURL} = await import('node:url');
-  const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+  const {fileURLToPath, pathToFileURL} = await import('node:url');
+  const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
   const source = fs.readFileSync(path.join(root, 'src/services/profile-store.js'), 'utf8');
   const bodyStart = source.indexOf('const DIRECTORY_NAME');
   assert.notEqual(bodyStart, -1);

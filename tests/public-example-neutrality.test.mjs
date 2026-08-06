@@ -11,10 +11,23 @@ const TEXT_EXTENSIONS = new Set([
   '', '.css', '.desktop', '.in', '.ini', '.js', '.json', '.md', '.mjs', '.po', '.pot', '.sh', '.svg', '.txt', '.xml', '.yml', '.yaml',
 ]);
 
+const SKIPPED_NAMES = new Set([
+  '.git',
+  '.flatpak-builder',
+  '.jekyll-cache',
+  'SHA256SUMS',
+  '_build',
+  '_flatpak-build',
+  '_flatpak-repo',
+  '_native-build',
+  '_native-install',
+  '_site',
+]);
+
 function walkTextFiles(directory) {
   const files = [];
   for (const name of readdirSync(directory)) {
-    if (name === '.git' || name === 'SHA256SUMS')
+    if (SKIPPED_NAMES.has(name))
       continue;
     const path = join(directory, name);
     const stat = statSync(path);
