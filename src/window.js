@@ -92,8 +92,7 @@ class WorkspaceHubWindow extends Adw.ApplicationWindow {
     this._split = new Adw.NavigationSplitView();
     this._toast.set_child(this._split);
     this._split.set_sidebar(new Adw.NavigationPage({title: 'Workspace Hub', child: this._buildSidebar()}));
-    this._beginViewGeneration();
-    this._contentPage = new Adw.NavigationPage({title: this._pageMeta('overview')[0], child: this._buildPage('overview')});
+    this._contentPage = new Adw.NavigationPage({title: this._pageMeta('overview')[0]});
     this._split.set_content(this._contentPage);
 
     const compactNavigation = new Adw.Breakpoint({
@@ -104,6 +103,7 @@ class WorkspaceHubWindow extends Adw.ApplicationWindow {
 
     this.connect('notify::width', () => this._updateLayout());
     this._contentPage.connect('notify::width', () => this._updateLayout());
+    this._navigate('overview');
     GLib.idle_add(GLib.PRIORITY_DEFAULT_IDLE, () => {
       this._updateLayout();
       if (this._store.warning)
